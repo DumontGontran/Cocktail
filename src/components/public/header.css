@@ -1,0 +1,32 @@
+header {
+    margin-bottom: 10px;
+    background-color: whitesmoke;
+    text-align: right;
+    border-bottom: 1px dashed darkcyan;
+    box-shadow: 0 0 5px darkcyan;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    list-style: none;
+    padding-top: 10px;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    transition: all 100ms ease-in-out;
+}
+
+ul li a:hover {
+    color: darkcyan;
+    font-weight: bold;
+    transition: all 100ms ease-in-out;
+}
