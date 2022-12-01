@@ -1,12 +1,12 @@
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
-import PublicRoute from './pages/public/PublicRoute';
+import PublicRouter from '../src/pages/public/PublicRouter';
 
 const App = () => {
   return (
     <div className='App'>
       <BrowserRouter>
-        <PublicRoute/>
+        <PublicRouter/>
       </BrowserRouter>
     </div>
   );
