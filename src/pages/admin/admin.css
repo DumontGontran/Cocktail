@@ -1,0 +1,7 @@
+#admin {
+    display: flex;
+}
+
+#admin_body {
+    flex-grow: 6;
+}

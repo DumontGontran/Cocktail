@@ -1,0 +1,14 @@
+.AdminHeader {
+    text-align: center;
+    line-height: 50px;
+    background-color: whitesmoke;
+    border-bottom: 1px dashed darkcyan;
+    box-shadow: 0 0 10px darkcyan;
+}
+
+.AdminHeader h1 {
+    margin: 0;
+    padding: 0;
+    color: darkcyan;
+    font-size: 20px;
+}
