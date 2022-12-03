@@ -1,12 +1,23 @@
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PublicRouter from '../src/pages/public/PublicRouter';
+import AdminRouter from '../src/pages/admin/AdminRouter';
+import AuthRouter from './pages/auth/AuthRouter';
+import AuthGuard from './_helpers/AuthGuard';
 
 const App = () => {
   return (
     <div className='App'>
       <BrowserRouter>
-        <PublicRouter/>
+        <Routes>
+          <Route path='/*' element={<PublicRouter />} />
+          <Route path='/admin/*' element={
+            <AuthGuard>
+              <AdminRouter />
+            </AuthGuard>
+          } />
+          <Route path='/auth/*' element={<AuthRouter />} />
+        </Routes>
       </BrowserRouter>
     </div>
   );
