@@ -4,7 +4,7 @@ import '../public/header.css'
 
 const Header = () => {
     return (
-        <header>
+        <header className='PublicHeader'>
             <nav>
                 <ul>
                     <li><Link to='/home'>Accueil</Link></li>

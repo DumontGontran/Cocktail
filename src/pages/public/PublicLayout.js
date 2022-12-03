@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '../../components/public/Header';
 
-const Layout = () => {
+const PublicLayout = () => {
     return (
         <div>
             <Header/>
@@ -11,4 +11,4 @@ const Layout = () => {
     )
 }
 
-export default Layout;
+export default PublicLayout;
