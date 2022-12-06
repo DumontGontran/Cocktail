@@ -1,0 +1,90 @@
+.User {
+    width: 800px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 50px;
+    background-color: whitesmoke;
+    border: 1px dashed darkcyan;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px darkcyan;
+}
+
+.User h1 {
+    margin: 0;
+    padding: 0;
+    color: darkcyan;
+    font-size: 20px;
+}
+.User .group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.User .group label {
+    color: black;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.User .group input {
+    width: 250px;
+    border-color: darkcyan;
+}
+
+.User .group button {
+    cursor: pointer;
+    margin: 20px 0;
+    color: black;
+    background-color: whitesmoke;
+    border-color: darkcyan;
+}
+
+.User .group button:hover {
+    color: darkcyan;
+    font-weight: bold;
+    box-shadow: 0 0 5px darkcyan;
+}
+
+.User table {
+    margin: auto;
+    border: 2px dashed darkcyan;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-spacing: 0;
+}
+
+.User table thead tr th {
+    padding: 5px 5px;
+    border: 2px dashed darkcyan;
+    border-left: none;
+    border-bottom: none;
+    
+}
+
+.User table tbody tr td {
+    padding: 5px 5px;
+    border-top: 2px dashed darkcyan;
+    border-right: 2px dashed darkcyan;
+}
+
+.userEditIcon {
+    cursor: pointer;
+    color: black;
+}
+
+.userEditIcon:hover {
+    color: green;
+}
+
+.userDeleteIcon {
+    cursor: pointer;
+    color: black;
+}
+
+.userDeleteIcon:hover {
+    color: red;
+}
