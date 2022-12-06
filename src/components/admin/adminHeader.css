@@ -1,5 +1,5 @@
 .AdminHeader {
-    text-align: center;
+    display: flex;
     line-height: 50px;
     background-color: whitesmoke;
     border-bottom: 1px dashed darkcyan;
@@ -11,4 +11,20 @@
     padding: 0;
     color: darkcyan;
     font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.AdminHeader button {
+    width: 150px;
+    cursor: pointer;
+    margin: 5px 5px;
+    color: black;
+    background-color: whitesmoke;
+    border-color: darkcyan;
+}
+
+.AdminHeader button:hover {
+    font-weight: bold;
+    box-shadow: 0 0 5px darkcyan;
 }
