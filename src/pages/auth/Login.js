@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { accountService } from '../../_services';
 import '../auth/auth.css';
 
 const Login = () => {
+    let navigate = useNavigate();
+
     const [credentials, setCredentials] = useState({
-        login: '', password: ''
+        email: '', 
+        password: ''
     });
 
     const updateCredentials = (event) => {
@@ -15,15 +20,20 @@ const Login = () => {
 
     const loginSubmit = (event) => {
         event.preventDefault();
-        console.log('DATA =>', credentials);
+        accountService.login(credentials)
+        .then(res => {
+            accountService.saveToken(res.data.access_token);
+            navigate('/admin');
+        })
+        .catch(error => console.log(error))
     };
 
     return (
         <form className='Login' onSubmit={loginSubmit}>
             <h1>Connexion</h1>
             <div className='group'>
-                <label htmlFor='login'>Identifiant</label>
-                <input type='text' name='login' autoComplete='current-user' value={credentials.login} onChange={updateCredentials} />
+                <label htmlFor='email'>Email</label>
+                <input type='email' name='email' autoComplete='current-email' value={credentials.email} onChange={updateCredentials} />
             </div>
             <div className='group'>
                 <label htmlFor='password'>Mot de passe</label>
