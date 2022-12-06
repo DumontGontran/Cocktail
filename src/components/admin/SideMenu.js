@@ -13,7 +13,6 @@ const SideMenu = () => {
                     <ul>
                         <li><Link to='/admin/user/index'>Liste</Link></li>
                         <li><Link to='/admin/user/add'>Ajouter</Link></li>
-                        <li><Link to='/admin/user/edit'>Éditer</Link></li>
                     </ul>
                 </li>
                 <li>
