@@ -1,0 +1,70 @@
+h1{
+    color:whitesmoke;
+}
+
+.Home {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Service img {
+    max-width: 800px;
+    max-height: 800px;
+    border: 2px dashed darkcyan;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px darkcyan;
+}
+
+.Service h1 {
+    color: whitesmoke;
+    text-shadow: 0 0 5px darkcyan;
+    position: relative;
+    top: -230px;
+    left: 0;
+    transition: text-shadow 150ms ease-in-out;
+}
+
+.Service h1:hover{
+    text-shadow: 0 0 5px black;
+    transition: text-shadow 150ms ease-in-out;
+}
+
+.Service p {
+    color: whitesmoke;
+    text-shadow: 0 0 5px darkcyan;
+    position: relative;
+    top: -240px;
+    left: 0;
+    margin:0;
+    transition: text-shadow 150ms ease-in-out;
+}
+
+.Service p:hover{
+    text-shadow: 0 0 5px black;
+    transition: text-shadow 150ms ease-in-out;
+}
+
+.Service span {
+    color: whitesmoke;
+    text-shadow: 0 0 5px darkcyan;
+    position: relative;
+    top: -230px;
+    left: 0;
+    margin:0;
+    font-weight: 200;
+    text-decoration: underline;
+    transition: text-shadow 150ms ease-in-out;
+}
+
+.Service span:hover{
+    text-shadow: 0 0 5px black;
+    transition: text-shadow 150ms ease-in-out;
+}

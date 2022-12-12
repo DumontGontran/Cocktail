@@ -1,0 +1,55 @@
+.CardArticle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: filter 150ms ease-in-out;
+    max-height: 425px;
+    padding: 5px 20px;
+}
+
+.CardArticle:hover {
+    filter: contrast(130%);
+    transition: filter 150ms ease-in-out;
+}
+
+.CardArticle img {
+    max-width: 600px;
+    max-height: 600px;
+    border: 2px dashed darkcyan;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px darkcyan;
+}
+
+.CardArticle h1 {
+    position: relative;
+    top: -125px;
+    left: 0;
+}
+
+.CardArticle p {
+    position: relative;
+    top: -140px;
+    left: 0;
+    margin:0;
+}
+
+.CardArticle span {
+    position: relative;
+    top: -135px;
+    left: 0;
+    margin:0;
+    font-weight: 200;
+    text-decoration: underline;
+}
+
+.CardLink {
+    color: whitesmoke;
+    text-shadow: 0 0 5px darkcyan;
+    text-decoration: none;
+    transition: text-shadow 150ms ease-in-out;
+}
+
+.CardLink:hover {
+    text-shadow: 0 0 5px black;
+    transition: text-shadow 150ms ease-in-out;
+}
