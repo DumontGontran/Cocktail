@@ -34,7 +34,7 @@ const UserAdd = () => {
     return (
         <div className='UserAdd'>
              <form className='User' onSubmit={userCreateSubmit}>
-            <h1>Édition de l'utilisateur</h1>
+            <h1>Ajouter un utilisateur</h1>
             <div className='group'>
                 <label htmlFor='nom'>Nom</label>
                 <input type='text' name='nom' autoComplete='current-nom' value={user.nom} onChange={createUser} />

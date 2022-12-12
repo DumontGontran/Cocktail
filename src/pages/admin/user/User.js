@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link /*, useNavigate*/ } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserEdit, faUserSlash } from '@fortawesome/free-solid-svg-icons';
 import { userService } from '../../../_services';
@@ -7,7 +7,6 @@ import { userService } from '../../../_services';
 import '../user/user.css';
 
 const User = () => {
-    //let navigate = useNavigate();
     const [users, updateUsers] = useState([]);
     const flags = useRef(false);
 
@@ -55,7 +54,7 @@ const User = () => {
                                 <td>{user.nom}</td>
                                 <td>{user.prenom}</td>
                                 <td>{user.email}</td>
-                                <td>{user.createdAt}</td>
+                                <td>{user.createdAt.split('T')[0].split('-').reverse().join('-')}</td>
                                 <td><Link to={`../edit/${user.id}`}><FontAwesomeIcon icon={faUserEdit} size='lg' className='userEditIcon' /></Link></td>
                                 <td><span onClick={() => delUser(user.id)}><FontAwesomeIcon icon={faUserSlash} size='lg' className='userDeleteIcon' /></span></td>
                             </tr>
