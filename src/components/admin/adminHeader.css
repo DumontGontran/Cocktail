@@ -28,3 +28,20 @@
     font-weight: bold;
     box-shadow: 0 0 5px darkcyan;
 }
+
+.AdminHeader li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.AdminHeader li a {
+    text-decoration: none;
+    color: black;
+    transition: all 100ms ease-in-out;
+}
+
+.AdminHeader li a:hover {
+    color: darkcyan;
+    font-weight: bold;
+    transition: all 100ms ease-in-out;
+}

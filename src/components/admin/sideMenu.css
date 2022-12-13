@@ -1,5 +1,6 @@
 .SideMenu {
-    height: 250px;
+    height: 200px;
+    min-width: 130px;
     margin-top: 20px;
     text-align: left;
     background-color: whitesmoke;
@@ -34,4 +35,25 @@
     color: darkcyan;
     font-weight: bold;
     transition: all 100ms ease-in-out;
+}
+
+@media screen and (max-device-width: 1024px)  and (orientation : portrait) {
+    .SideMenu {
+        flex-grow: 0;
+        border-radius: 10px 10px 10px 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: 100px;
+    }
+
+    .SideMenu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .SideMenu ul li ul {
+        flex-direction: column;
+    }
 }

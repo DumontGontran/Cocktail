@@ -1,0 +1,90 @@
+.Cocktail {
+    width: 800px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 50px;
+    background-color: whitesmoke;
+    border: 1px dashed darkcyan;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px darkcyan;
+}
+
+.Cocktail h1 {
+    margin: 0;
+    padding: 0;
+    color: darkcyan;
+    font-size: 20px;
+}
+.Cocktail .group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Cocktail .group label {
+    color: black;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.Cocktail .group input {
+    width: 250px;
+    border-color: darkcyan;
+}
+
+.Cocktail .group button {
+    cursor: pointer;
+    margin: 20px 0;
+    color: black;
+    background-color: whitesmoke;
+    border-color: darkcyan;
+}
+
+.Cocktail .group button:hover {
+    color: darkcyan;
+    font-weight: bold;
+    box-shadow: 0 0 5px darkcyan;
+}
+
+.Cocktail table {
+    margin: auto;
+    border: 2px dashed darkcyan;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-spacing: 0;
+}
+
+.Cocktail table thead tr th {
+    padding: 5px 5px;
+    border: 2px dashed darkcyan;
+    border-left: none;
+    border-bottom: none;
+    
+}
+
+.Cocktail table tbody tr td {
+    padding: 5px 5px;
+    border-top: 2px dashed darkcyan;
+    border-right: 2px dashed darkcyan;
+}
+
+.cocktailEditIcon {
+    cursor: pointer;
+    color: black;
+}
+
+.cocktailEditIcon:hover {
+    color: green;
+}
+
+.cocktailDeleteIcon {
+    cursor: pointer;
+    color: black;
+}
+
+.cocktailDeleteIcon:hover {
+    color: red;
+}

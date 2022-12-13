@@ -5,3 +5,13 @@
 #admin_body {
     flex-grow: 6;
 }
+
+@media screen and (max-device-width: 1024px)  and (orientation : portrait) {
+    #admin {
+        flex-direction: column;
+    }
+
+    #admin_body {
+        flex-grow: 0;
+    }
+}
