@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { userService } from '../../../_services';
-
-import '../user/user.css';
+import { userService } from '../../_services';
 
 const UserAdd = () => {
     const navigate = useNavigate();
@@ -26,7 +24,7 @@ const UserAdd = () => {
         userService.addUser(user)
         .then(res => {
             console.log(res);
-            navigate('../index');
+            navigate('../login');
         })
         .catch(error => console.log(error))
     };
