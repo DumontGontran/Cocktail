@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { accountService } from '../../_services';
-import '../auth/auth.css';
 
 const Login = () => {
     let navigate = useNavigate();
@@ -41,6 +40,7 @@ const Login = () => {
             </div>
             <div className='group'>
                 <button>Se connecter</button>
+                <Link to='/auth/register'>Créer un nouveau compte en cliquant ici</Link>
             </div>
         </form>
     )
