@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { userService } from '../../_services';
 
-const UserAdd = () => {
+const Register = () => {
     const navigate = useNavigate();
     const [user, setUser] = useState({
         nom: '',
@@ -55,10 +55,11 @@ const UserAdd = () => {
             </div>
             <div className='group'>
                 <button>Ajouter</button>
+                <Link to='/auth/login'>Se connecter en cliquant ici</Link>
             </div>
         </form>
         </div>
     )
 }
 
-export default UserAdd;
+export default Register;
