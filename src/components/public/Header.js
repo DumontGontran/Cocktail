@@ -9,7 +9,7 @@ const Header = () => {
                 <ul>
                     <li><Link to='/home'>Accueil</Link></li>
                     <li><Link to='/contact'>Contact</Link></li>
-                    <li><Link to ='/admin/user/index'>Panneau d'administration</Link></li>
+                    <li><Link to ='/admin/user/index'>Administration</Link></li>
                 </ul>
             </nav>
         </header>
