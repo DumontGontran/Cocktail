@@ -48,12 +48,16 @@
     }
 
     .SideMenu ul {
+        width: 70px;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
+        margin-inline-start: inherit;
+        margin-inline-end: inherit;
     }
 
     .SideMenu ul li ul {
         flex-direction: column;
+        margin-right: 20px;
     }
 }
