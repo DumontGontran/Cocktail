@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Error from '../../_utils/Error';
-import { Login, UserAdd } from '../auth';
+import { Login, Register } from '../auth';
 import { PublicLayout } from '../public';
 
 const AuthRouter = () => {
@@ -10,7 +10,7 @@ const AuthRouter = () => {
             <Route element={<PublicLayout />}>
                 <Route index element={<Login />} />
                 <Route path='login' element={<Login />} />
-                <Route path='register' element={<UserAdd />} />
+                <Route path='register' element={<Register />} />
                 <Route path='*' element={<Error />} />
             </Route>
         </Routes>
