@@ -109,3 +109,24 @@
     font-weight: bold;
     box-shadow: 0 0 5px darkcyan;
 }
+
+.User a {
+    color: black;
+    transition: all 100ms ease-in-out;
+}
+
+.User a:hover {
+    color: darkcyan;
+    font-weight: bold;
+    transition: all 100ms ease-in-out;
+}
+
+@media screen and (max-device-width: 1024px)  and (orientation : portrait) {
+    .Login {
+        max-width: 350px;
+    }
+
+    .User {
+        max-width: 350px;
+    }
+}
