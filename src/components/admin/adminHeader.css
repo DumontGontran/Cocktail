@@ -13,12 +13,13 @@
     font-size: 20px;
     margin-right: auto;
     margin-left: auto;
+    padding-left: 10px;
 }
 
 .AdminHeader button {
     width: 150px;
     cursor: pointer;
-    margin: 5px 5px;
+    margin: 5px 15px;
     color: black;
     background-color: whitesmoke;
     border-color: darkcyan;
@@ -35,6 +36,8 @@
 }
 
 .AdminHeader li a {
+    margin-top: 10px;
+    margin-left: 30px;
     text-decoration: none;
     color: black;
     transition: all 100ms ease-in-out;
@@ -44,4 +47,18 @@
     color: darkcyan;
     font-weight: bold;
     transition: all 100ms ease-in-out;
+}
+
+@media screen and (max-device-width: 1024px)  and (orientation : portrait) {
+    .AdminHeader {
+        line-height: 25px;
+    }
+
+    .AdminHeader li {
+        display: flex;
+    }
+
+    .AdminHeader li a {
+        margin-top: 12.5px;
+    }
 }
