@@ -68,3 +68,72 @@ h1{
     text-shadow: 0 0 5px black;
     transition: text-shadow 150ms ease-in-out;
 }
+
+.Contact {
+    margin: auto;
+    max-width: 800px;
+    background-color: whitesmoke;
+    border: 2px dashed darkcyan;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.Contact h1 {
+    color: darkcyan;
+    margin: 0 auto;
+}
+
+.Contact div {
+    margin: auto;
+    max-width: 300px;
+    background-color: whitesmoke;
+    border: 2px dashed darkcyan;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.Contact div h2 {
+    margin-top: 0;
+    color:darkcyan;
+}
+
+.Contact div h3 {
+    color: black;
+}
+
+.Contact div p {
+    border-top: 2px dashed darkcyan;
+    margin: auto 0;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.Contact div p span {
+    font-weight: normal;
+}
+
+.Contact div p a {
+    text-decoration: none;
+    font-weight: normal;
+    color: black;
+    transition: all 150ms ease-in-out;
+}
+
+.Contact div p a:hover {
+    color: darkcyan;
+    font-weight: bold;
+    transition: all 150ms ease-in-out;
+}
+
+@media screen and (max-device-width: 1024px)  and (orientation : portrait) {
+    .Service img {
+        max-width: 350px;
+        max-height: 350px;
+        border: 2px dashed darkcyan;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 0 0 10px darkcyan;
+    }
+
+    .Contact {
+        max-width: 350px;
+    }
+}
