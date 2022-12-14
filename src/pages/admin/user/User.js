@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserEdit, faUserSlash } from '@fortawesome/free-solid-svg-icons';
 import { userService, accountService } from '../../../_services';
@@ -9,6 +9,7 @@ import '../user/user.css';
 const User = () => {
     const [users, updateUsers] = useState([]);
     const {id} = accountService.getTokenInfo();
+    const navigate = useNavigate();
     const flags = useRef(false);
 
     useEffect(() => {
@@ -28,6 +29,7 @@ const User = () => {
         .then(res => {
             console.log(res);
             accountService.logout();
+            navigate('../../../auth/register');
         })
         .catch(error => console.log(error))
     };
@@ -51,11 +53,11 @@ const User = () => {
                     {
                         users.map(user => (
                             <tr key={user.id}>
-                                <td>{user.id}</td>
-                                <td>{user.nom}</td>
-                                <td>{user.prenom}</td>
-                                <td>{user.email}</td>
-                                <td>{user.createdAt.split('T')[0].split('-').reverse().join('-')}</td>
+                                <td data-label='ID'>{user.id}</td>
+                                <td data-label='Nom'>{user.nom}</td>
+                                <td data-label='Prénom'>{user.prenom}</td>
+                                <td data-label='Email'>{user.email}</td>
+                                <td data-label='Date de création'>{user.createdAt.split('T')[0].split('-').reverse().join('-')}</td>
                                 {user.id === id &&
                                     <>
                                         <td><Link to={`../edit/${user.id}`}><FontAwesomeIcon icon={faUserEdit} size='lg' className='userEditIcon' /></Link></td>
