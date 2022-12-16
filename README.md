@@ -5,7 +5,9 @@ In the project directory, install dependencies:
 
 # Getting Started Backend 
 
-LINK AND INFORMATIONS COMING SOON... !!!
+Cocktail API Rest Express: [https://github.com/DumontGontran/Cocktail-API-Rest-Express](https://github.com/DumontGontran/Cocktail-API-Rest-Express)
+
+### `npm install cors dotenv express jsonwebtoken mysql2 sequelize nodemon`
 
 ## Available Scripts
 In the project directory, you can run:
