@@ -6,10 +6,10 @@ import '../cocktail/cocktail.css';
 
 const CocktailEdit = () => {
     const [cocktail, setCocktail] = useState({});
+    const [isLoad, setLoad] = useState(false);
     let navigate = useNavigate();
     const flag = useRef(false);
     const { cid } = useParams();
-    console.log('cid', cid);
 
     const updateCocktail = (event) => {
         setCocktail({
@@ -21,8 +21,7 @@ const CocktailEdit = () => {
     const cocktailEditSubmit = (event) => {
         event.preventDefault();
         cocktailService.updateCocktail(cocktail)
-        .then(res => {
-            console.log(res);
+        .then(_res => {
             navigate('../index');
         })
         .catch(error => console.log(error))
@@ -32,7 +31,10 @@ const CocktailEdit = () => {
         if(flag.current === false) {
             cocktailService.getCocktail(cid)
             .then(res => {
-                setCocktail(res.data.data)
+                setTimeout(() => {
+                setCocktail(res.data.data);
+                setLoad(true);
+                }, 1000)
             })
             .catch(error => console.log(error))
         }
@@ -41,10 +43,14 @@ const CocktailEdit = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     
+    if (!isLoad) {
+        return <h1>Loading...</h1>
+    }
+
     return (
         <div className='CocktailEdit'>
             <form className='Cocktail' onSubmit={cocktailEditSubmit}>
-            <h1>Édition de l'utilisateur</h1>
+            <h1>Édition du cocktail</h1>
             <div className='group'>
                 <label htmlFor='nom'>Nom</label>
                 <input type='text' name='nom' autoComplete='current-nom' value={cocktail.nom} onChange={updateCocktail} />

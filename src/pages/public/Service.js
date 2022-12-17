@@ -17,7 +17,6 @@ const Service = () => {
                     setTimeout(() => {
                         setCocktail(res.data.data);
                         setLoad(true);
-                        console.log(res.data.data);
                     }, 1000)
                 })
                 .catch(error => console.log(error))

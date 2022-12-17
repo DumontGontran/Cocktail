@@ -27,8 +27,7 @@ const CocktailAdd = () => {
         cocktail.user_id = id;
 
         cocktailService.addCocktail(cocktail)
-        .then(res => {
-            console.log(res);
+        .then(_res => {
             navigate('../index');
         })
         .catch(error => console.log(error))

@@ -24,8 +24,7 @@ const Register = () => {
     const userCreateSubmit = (event) => {
         event.preventDefault();
         userService.addUser(user)
-        .then(res => {
-            console.log(res);
+        .then(_res => {
             navigate('../login');
         })
         .catch(error => setMessage(error.response.data.message) )
