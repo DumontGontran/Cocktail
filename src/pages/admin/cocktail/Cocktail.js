@@ -8,6 +8,7 @@ import '../cocktail/cocktail.css';
 
 const Cocktail = () => {
     const [cocktails, setCocktails] = useState([]);
+    const [isLoad, setLoad] = useState(false);
     const flags = useRef(false);
     const {id} = accountService.getTokenInfo();
 
@@ -15,7 +16,10 @@ const Cocktail = () => {
         if(flags.current === false) {
         cocktailService.getAllCocktails()
             .then(res => {
+                setTimeout(() => {
                 setCocktails(res.data.data);
+                setLoad(true);
+                }, 1000)
             })
             .catch(error => console.log(error))
         }
@@ -32,6 +36,9 @@ const Cocktail = () => {
         .catch(error => console.log(error))
     };
 
+    if (!isLoad) {
+        return <h1>Chargement...</h1>
+    }
     return (
         <div className='Cocktail'>
             <h1>Liste des cocktails</h1>

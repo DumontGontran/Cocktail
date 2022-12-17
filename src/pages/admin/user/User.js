@@ -8,17 +8,21 @@ import '../user/user.css';
 
 const User = () => {
     const [users, updateUsers] = useState([]);
-    const {id} = accountService.getTokenInfo();
+    const [isLoad, setLoad] = useState(false);
+    const { id } = accountService.getTokenInfo();
     const navigate = useNavigate();
     const flags = useRef(false);
 
     useEffect(() => {
-        if(flags.current === false) {
-        userService.getAllUsers()
-            .then(res => {
-                updateUsers(res.data.data);
-            })
-            .catch(error => console.log(error))
+        if (flags.current === false) {
+            userService.getAllUsers()
+                .then(res => {
+                    setTimeout(() => {
+                        updateUsers(res.data.data);
+                        setLoad(true);
+                    }, 1000)
+                })
+                .catch(error => console.log(error))
         }
 
         return () => flags.current = true;
@@ -26,13 +30,17 @@ const User = () => {
 
     const delUser = (userId) => {
         userService.deleteUser(userId)
-        .then(res => {
-            console.log(res);
-            accountService.logout();
-            navigate('../../../auth/register');
-        })
-        .catch(error => console.log(error))
+            .then(res => {
+                console.log(res);
+                accountService.logout();
+                navigate('../../../auth/register');
+            })
+            .catch(error => console.log(error))
     };
+
+    if(!isLoad) {
+        return <h1>Chargement...</h1>
+    }
 
     return (
         <div className='User'>

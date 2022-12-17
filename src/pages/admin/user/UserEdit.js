@@ -55,7 +55,7 @@ const UserEdit = () => {
     };
     
     if (!isLoad) {
-        return <h1>Loading...</h1>
+        return <h1>Chargement...</h1>
     }
 
     return (
