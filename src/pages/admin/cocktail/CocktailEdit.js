@@ -47,7 +47,7 @@ const CocktailEdit = () => {
     }, []);
 
     if (!isLoad) {
-        return <h1><FontAwesomeIcon icon={faSpinner} size='lg' className='spinnerIcon' /></h1>
+        return <h1><FontAwesomeIcon icon={faSpinner} size='xl' className='spinnerIcon' /></h1>
     }
 
     return (
