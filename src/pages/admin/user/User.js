@@ -38,7 +38,7 @@ const User = () => {
             .catch(error => console.log(error))
     };
 
-    if(!isLoad) {
+    if (!isLoad) {
         return <h1>Chargement...</h1>
     }
 
