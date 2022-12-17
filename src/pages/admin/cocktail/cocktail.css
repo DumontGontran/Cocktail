@@ -96,6 +96,35 @@
     font-weight: bold;
 }
 
+.spinnerIcon {
+    animation: spinnerRotation 600ms ease-in infinite;
+}
+
+@keyframes spinnerRotation {
+    0% {
+        color: white;
+        rotate: 0deg;
+    }
+    30% {
+        color: white;
+        rotate: 50deg;
+    }
+    40%{
+        color:darkcyan;
+    }
+    60%{
+        color:darkcyan;
+    }
+    70% {
+        color: white;
+        rotate: 310deg;
+    }
+    100% {
+        color: white;
+        rotate: 360deg;
+    }
+}
+
 @media screen and (max-device-width: 1024px)  and (orientation : portrait) {
     .Cocktail {
         max-width: 350px;

@@ -1,3 +1,5 @@
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { cocktailService } from '../../_services';
@@ -27,7 +29,7 @@ const Service = () => {
     }, []);
 
     if (!isLoad) {
-        return <h1>Chargement...</h1>
+        return <h1><FontAwesomeIcon icon={faSpinner} size='lg' className='spinnerIcon' /></h1>
     }
 
     return (

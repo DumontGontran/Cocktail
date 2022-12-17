@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faEdit, faSpinner, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { accountService, cocktailService } from '../../../_services';
 
 import '../cocktail/cocktail.css';
@@ -37,7 +37,7 @@ const Cocktail = () => {
     };
 
     if (!isLoad) {
-        return <h1>Chargement...</h1>
+        return <h1><FontAwesomeIcon icon={faSpinner} size='lg' className='spinnerIcon' /></h1>
     }
     return (
         <div className='Cocktail'>

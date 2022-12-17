@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserEdit, faUserSlash } from '@fortawesome/free-solid-svg-icons';
+import { faUserEdit, faUserSlash, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { userService, accountService } from '../../../_services';
 
 import '../user/user.css';
@@ -39,7 +39,7 @@ const User = () => {
     };
 
     if (!isLoad) {
-        return <h1>Chargement...</h1>
+        return <h1><FontAwesomeIcon icon={faSpinner} size='lg' className='spinnerIcon' /></h1>
     }
 
     return (
