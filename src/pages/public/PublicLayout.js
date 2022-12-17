@@ -7,8 +7,8 @@ import '../../pages/public/public.css';
 const PublicLayout = () => {
     return (
         <div>
-            <Header/>
-            <Outlet/>
+            <Header />
+            <Outlet />
         </div>
     )
 }

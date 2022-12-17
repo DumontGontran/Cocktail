@@ -6,6 +6,14 @@ import '../user/user.css';
 
 const UserEdit = () => {
     let navigate = useNavigate();
+    const [user, setUser] = useState({
+        nom: '',
+        prenom: '',
+        pseudo: '',
+        email: '',
+        createdAt: ''
+    });
+
     const [isLoad, setLoad] = useState(false);
     const flag = useRef(false);
     const { uid } = useParams();
@@ -20,19 +28,11 @@ const UserEdit = () => {
                     }, 1000)
                 })
                 .catch(error => console.log(error))
-            }
+        }
 
-            return () => flag.current = true;
-            // eslint-disable-next-line react-hooks/exhaustive-deps
-        }, []);
-
-    const [user, setUser] = useState({
-        nom: '',
-        prenom: '',
-        pseudo: '',
-        email: '',
-        createdAt: ''
-    });
+        return () => flag.current = true;
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const [message, setMessage] = useState();
 
@@ -53,7 +53,7 @@ const UserEdit = () => {
                 setMessage(error.response.data.message)
             })
     };
-    
+
     if (!isLoad) {
         return <h1>Chargement...</h1>
     }

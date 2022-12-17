@@ -8,8 +8,8 @@ import '../auth/auth.css';
 const AuthLayout = () => {
     return (
         <div>
-            <Header/>
-            <Outlet/>
+            <Header />
+            <Outlet />
         </div>
     )
 }

@@ -7,25 +7,25 @@ import { User, UserEdit } from '../admin/user';
 import { Cocktail, CocktailAdd, CocktailEdit } from '../admin/cocktail';
 
 const PublicRouter = () => {
-    return (
-        <Routes>
-          <Route element={<AdminLayout />}>
-            <Route index element={<User />} />
-            <Route path='user'>
-                <Route path='index' element={<User />} />
-                <Route path='edit/:uid' element={<UserEdit />} />
-            </Route>
+  return (
+    <Routes>
+      <Route element={<AdminLayout />}>
+        <Route index element={<User />} />
+        <Route path='user'>
+          <Route path='index' element={<User />} />
+          <Route path='edit/:uid' element={<UserEdit />} />
+        </Route>
 
-            <Route path='cocktail'>
-                <Route path='index' element={<Cocktail />} />
-                <Route path='add' element={<CocktailAdd />} />
-                <Route path='edit/:cid' element={<CocktailEdit />} />
-            </Route>
+        <Route path='cocktail'>
+          <Route path='index' element={<Cocktail />} />
+          <Route path='add' element={<CocktailAdd />} />
+          <Route path='edit/:cid' element={<CocktailEdit />} />
+        </Route>
 
-            <Route path='*' element={<Error />} />
-          </Route>
-        </Routes>
-    )
+        <Route path='*' element={<Error />} />
+      </Route>
+    </Routes>
+  )
 }
 
 export default PublicRouter;

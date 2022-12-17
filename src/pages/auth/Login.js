@@ -6,7 +6,7 @@ const Login = () => {
     let navigate = useNavigate();
 
     const [credentials, setCredentials] = useState({
-        email: '', 
+        email: '',
         password: ''
     });
 
@@ -22,11 +22,11 @@ const Login = () => {
     const loginSubmit = (event) => {
         event.preventDefault();
         accountService.login(credentials)
-        .then(res => {
-            accountService.saveToken(res.data.access_token);
-            navigate('/admin');
-        })
-        .catch(error => setMessage(error.response.data.message))
+            .then(res => {
+                accountService.saveToken(res.data.access_token);
+                navigate('/admin');
+            })
+            .catch(error => setMessage(error.response.data.message))
     };
 
     return (

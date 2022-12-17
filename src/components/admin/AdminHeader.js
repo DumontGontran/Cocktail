@@ -8,7 +8,7 @@ const AdminHeader = () => {
     let navigate = useNavigate();
     const [over, setOver] = useState(false);
 
-    const logout =() => {
+    const logout = () => {
         accountService.logout();
         navigate('/');
     };
@@ -18,7 +18,7 @@ const AdminHeader = () => {
             <h1>Panneau d'administration</h1>
             <li><Link to='/'>Accueil</Link></li>
             <button onClick={logout} onMouseOver={() => setOver(true)}
-        onMouseLeave={() => setOver(false)}><FontAwesomeIcon icon={faRightFromBracket} size= 'lg' style={over ? { color: 'darkcyan' } : {}} /></button>
+                onMouseLeave={() => setOver(false)}><FontAwesomeIcon icon={faRightFromBracket} size='lg' style={over ? { color: 'darkcyan' } : {}} /></button>
         </div>
     )
 }
