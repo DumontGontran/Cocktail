@@ -6,6 +6,7 @@ import '../cocktail/cocktail.css';
 
 const CocktailEdit = () => {
     const [cocktail, setCocktail] = useState({});
+    const [message, setMessage] = useState();
     const [isLoad, setLoad] = useState(false);
     let navigate = useNavigate();
     const flag = useRef(false);
@@ -24,7 +25,7 @@ const CocktailEdit = () => {
         .then(_res => {
             navigate('../index');
         })
-        .catch(error => console.log(error))
+        .catch(error => setMessage(error.response.data.message))
     };
 
     useEffect(() => {
@@ -65,6 +66,7 @@ const CocktailEdit = () => {
             </div>
             <div className='group'>
                 <button>Modifier</button>
+                <p className='errorMessage'>{message}</p>
             </div>
         </form>
         </div>

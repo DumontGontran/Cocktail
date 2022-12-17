@@ -13,6 +13,8 @@ const CocktailAdd = () => {
         recette: ''
     });
 
+    const [message, setMessage] = useState();
+
     const createCocktail = (event) => {
         setCocktail({
             ...cocktail,
@@ -30,7 +32,7 @@ const CocktailAdd = () => {
         .then(_res => {
             navigate('../index');
         })
-        .catch(error => console.log(error))
+        .catch(error => setMessage(error.response.data.message))
     };
 
     return (
@@ -51,6 +53,7 @@ const CocktailAdd = () => {
             </div>
             <div className='group'>
                 <button>Ajouter</button>
+                <p className='errorMessage'>{message}</p>
             </div>
         </form>
         </div>
