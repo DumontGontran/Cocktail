@@ -91,6 +91,11 @@
     color: red;
 }
 
+.errorMessage {
+    color: red;
+    font-weight: bold;
+}
+
 @media screen and (max-device-width: 1024px)  and (orientation : portrait) {
     .User {
         max-width: 350px;

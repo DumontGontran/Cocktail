@@ -12,6 +12,8 @@ const Register = () => {
         password: ''
     });
 
+    const [message, setMessage] = useState();
+
     const createUser = (event) => {
         setUser({
             ...user,
@@ -26,7 +28,7 @@ const Register = () => {
             console.log(res);
             navigate('../login');
         })
-        .catch(error => console.log(error))
+        .catch(error => setMessage(error.response.data.message) )
     };
 
     return (
@@ -56,6 +58,7 @@ const Register = () => {
             <div className='group'>
                 <button>Ajouter</button>
                 <Link to='/auth/login'>Se connecter en cliquant ici</Link>
+                <p className='errorMessage'>{message}</p>
             </div>
         </form>
         </div>

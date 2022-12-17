@@ -121,6 +121,11 @@
     transition: all 100ms ease-in-out;
 }
 
+.errorMessage {
+    color: red;
+    font-weight: bold;
+}
+
 @media screen and (max-device-width: 1024px)  and (orientation : portrait) {
     .Login {
         max-width: 350px;

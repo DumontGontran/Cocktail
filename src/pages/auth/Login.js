@@ -10,6 +10,8 @@ const Login = () => {
         password: ''
     });
 
+    const [message, setMessage] = useState();
+
     const updateCredentials = (event) => {
         setCredentials({
             ...credentials,
@@ -24,7 +26,7 @@ const Login = () => {
             accountService.saveToken(res.data.access_token);
             navigate('/admin');
         })
-        .catch(error => console.log(error))
+        .catch(error => setMessage(error.response.data.message))
     };
 
     return (
@@ -41,6 +43,7 @@ const Login = () => {
             <div className='group'>
                 <button>Se connecter</button>
                 <Link to='/auth/register'>Créer un nouveau compte en cliquant ici</Link>
+                <p className='errorMessage'>{message}</p>
             </div>
         </form>
     )

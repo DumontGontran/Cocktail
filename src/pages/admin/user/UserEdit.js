@@ -31,6 +31,8 @@ const UserEdit = () => {
         createdAt: ''
     });
 
+    const [message, setMessage] = useState();
+
     const updateUser = (event) => {
         setUser({
             ...user,
@@ -45,7 +47,10 @@ const UserEdit = () => {
             console.log(res);
             navigate('../index');
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            console.log(error)
+            setMessage(error.response.data.message)
+        })
     };
 
     return (
@@ -70,6 +75,7 @@ const UserEdit = () => {
             </div>
             <div className='group'>
                 <button>Modifier</button>
+                <p className='errorMessage'>{message}</p>
             </div>
         </form>
         </div>
