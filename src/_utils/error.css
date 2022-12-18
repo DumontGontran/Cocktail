@@ -1,0 +1,12 @@
+.error404 {
+    margin: 20px auto;
+    width: 300px;
+    background: whitesmoke;
+    border: 2px dashed darkcyan;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px darkcyan;
+}
+
+.error404 h1 {
+    color: darkcyan;
+}
