@@ -10,9 +10,8 @@ const PublicRouter = () => {
   return (
     <Routes>
       <Route element={<AdminLayout />}>
-        <Route index element={<User />} />
         <Route path='user'>
-          <Route path='index' element={<User />} />
+          <Route index path='index' element={<User />} />
           <Route path='edit/:uid' element={<UserEdit />} />
         </Route>
 
