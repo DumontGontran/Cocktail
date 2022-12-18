@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { cocktailService } from '../../_services';
+import { cocktail0, cocktail1, cocktail2, cocktail4, cocktail5 } from '../../components/public/images';
 
 import '../public/public.css';
 
@@ -12,6 +13,16 @@ const Service = () => {
     let flag = useRef(false);
     let { cid } = useParams();
 
+    const getRandomImage = (arr) => {
+        const randomIndex = Math.floor(Math.random(1 * arr.length) * arr.length);
+        const image = arr[randomIndex];
+
+        return image;
+    }
+
+    const cocktailImages = [cocktail0, cocktail1, cocktail2, cocktail4, cocktail5];
+    const image = getRandomImage(cocktailImages);
+
     useEffect(() => {
         if (flag.current === false) {
             cocktailService.getCocktail(cid)
@@ -19,7 +30,7 @@ const Service = () => {
                     setTimeout(() => {
                         setCocktail(res.data.data);
                         setLoad(true);
-                    }, 1000)
+                    }, 1500)
                 })
                 .catch(error => console.log(error))
         }
@@ -34,7 +45,7 @@ const Service = () => {
 
     return (
         <div className='Service'>
-            <img src='https://cdn-elle.ladmedia.fr/var/plain_site/storage/images/elle-a-table/fiches-cuisine/tous-les-themes/recettes-de-cocktail/788840-9-fre-FR/Recettes-de-cocktail.jpg' alt={cocktail.nom} />
+            <img src={image} alt={cocktail.nom} />
             <h1>{cocktail.nom}</h1>
             <p>Description: {cocktail.description}</p>
             <p>Recette: {cocktail.recette}</p>
