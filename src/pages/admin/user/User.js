@@ -20,7 +20,7 @@ const User = () => {
                     setTimeout(() => {
                         updateUsers(res.data.data);
                         setLoad(true);
-                    }, 1000)
+                    }, 1500)
                 })
                 .catch(error => console.log(error))
         }
