@@ -45,7 +45,6 @@ const Cocktail = () => {
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Nom</th>
                         <th>Description</th>
                         <th>Date de création</th>
@@ -54,27 +53,19 @@ const Cocktail = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {
-                        cocktails.map(cocktail => (
-                            <tr key={cocktail.id}>
-                                <td data-label='ID'>{cocktail.id}</td>
-                                <td data-label='Nom'>{cocktail.nom}</td>
-                                <td data-label='Description'>{cocktail.description}</td>
-                                <td data-label='Date de création'>{cocktail.createdAt.split('T')[0].split('-').reverse().join('-')}</td>
-                                {cocktail.user_id === id &&
-                                    <>
-                                        <td><Link to={`../edit/${cocktail.id}`}><FontAwesomeIcon icon={faEdit} size='lg' className='cocktailEditIcon' /></Link></td>
-                                        <td><span onClick={() => delCocktail(cocktail.id)}><FontAwesomeIcon icon={faTrash} size='lg' className='cocktailDeleteIcon' /></span></td>
-                                    </>}
-                                {cocktail.user_id !== id &&
-                                    <>
-                                        <td></td>
-                                        <td></td>
-                                    </>
-                                }
-                            </tr>
-                        ))
-                    }
+                    {cocktails.map(cocktail => (
+                        <tr key={cocktail.id}>
+                            {cocktail.user_id === id &&
+                                <>
+                                    <td data-label='Nom'>{cocktail.nom}</td>
+                                    <td data-label='Description'>{cocktail.description}</td>
+                                    <td data-label='Date de création'>{cocktail.createdAt.split('T')[0].split('-').reverse().join('-')}</td>
+                                    <td><Link to={`../edit/${cocktail.id}`}><FontAwesomeIcon icon={faEdit} size='lg' className='cocktailEditIcon' /></Link></td>
+                                    <td><span onClick={() => delCocktail(cocktail.id)}><FontAwesomeIcon icon={faTrash} size='lg' className='cocktailDeleteIcon' /></span></td>
+                                </>
+                            }
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </div>

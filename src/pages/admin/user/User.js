@@ -48,7 +48,6 @@ const User = () => {
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Nom</th>
                         <th>Prénom</th>
                         <th>Email</th>
@@ -61,21 +60,14 @@ const User = () => {
                     {
                         users.map(user => (
                             <tr key={user.id}>
-                                <td data-label='ID'>{user.id}</td>
-                                <td data-label='Nom'>{user.nom}</td>
-                                <td data-label='Prénom'>{user.prenom}</td>
-                                <td data-label='Email'>{user.email}</td>
-                                <td data-label='Date de création'>{user.createdAt.split('T')[0].split('-').reverse().join('-')}</td>
                                 {user.id === id &&
                                     <>
+                                        <td data-label='Nom'>{user.nom}</td>
+                                        <td data-label='Prénom'>{user.prenom}</td>
+                                        <td data-label='Email'>{user.email}</td>
+                                        <td data-label='Date de création'>{user.createdAt.split('T')[0].split('-').reverse().join('-')}</td>
                                         <td><Link to={`../edit/${user.id}`}><FontAwesomeIcon icon={faUserEdit} size='lg' className='userEditIcon' /></Link></td>
                                         <td><span onClick={() => delUser(user.id)}><FontAwesomeIcon icon={faUserSlash} size='lg' className='userDeleteIcon' /></span></td>
-                                    </>
-                                }
-                                {user.id !== id &&
-                                    <>
-                                        <td></td>
-                                        <td></td>
                                     </>
                                 }
                             </tr>
