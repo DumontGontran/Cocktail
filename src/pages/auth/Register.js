@@ -9,7 +9,8 @@ const Register = () => {
         prenom: '',
         pseudo: '',
         email: '',
-        password: ''
+        password: '',
+        confirmPassword: ''
     });
 
     const [message, setMessage] = useState();
@@ -53,6 +54,10 @@ const Register = () => {
                 <div className='group'>
                     <label htmlFor='password'>Mot de passe</label>
                     <input type='password' name='password' autoComplete='current-password' value={user.password} onChange={createUser} />
+                </div>
+                <div className='group'>
+                    <label htmlFor='confirmPassword'>Confirmer le Mot de passe</label>
+                    <input type='password' name='confirmPassword' autoComplete='current-confirmPassword' value={user.confirmPassword} onChange={createUser} />
                 </div>
                 <div className='group'>
                     <button>Ajouter</button>
