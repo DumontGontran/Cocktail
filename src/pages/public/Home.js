@@ -6,7 +6,6 @@ import { cocktailService } from '../../_services';
 
 const Home = () => {
     const [cocktails, setCocktails] = useState([]);
-
     const flag = useRef(false);
     const [isLoad, setLoad] = useState(false);
 
@@ -17,7 +16,7 @@ const Home = () => {
                     setTimeout(() => {
                         setCocktails(res.data.data);
                         setLoad(true);
-                    }, 1000);
+                    }, 1500);
                 })
                 .catch(error => console.log(error))
         }
@@ -33,7 +32,7 @@ const Home = () => {
         <div className='Home'>
             {
                 cocktails.map((ckt) => (
-                    <Card key={ckt.id} ckt={ckt} image='https://cdn-elle.ladmedia.fr/var/plain_site/storage/images/elle-a-table/fiches-cuisine/tous-les-themes/recettes-de-cocktail/788840-9-fre-FR/Recettes-de-cocktail.jpg' />
+                    <Card key={ckt.id} ckt={ckt} />
                 ))
             }
         </div>

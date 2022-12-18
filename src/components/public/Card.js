@@ -1,9 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { cocktail0, cocktail1, cocktail2, cocktail3, cocktail4, cocktail5 } from './images';
 
 import '../public/card.css';
 
-const Card = ({ ckt, image }) => {
+const Card = ({ ckt }) => {
+    const getRandomImage = (arr) => {
+        let randomIndex = Math.floor(Math.random() * arr.length);
+        const image = arr[randomIndex++];
+
+        return image;
+    }
+
+    const cocktailImages = [cocktail0, cocktail1, cocktail2, cocktail3, cocktail4, cocktail5];
+    const image = getRandomImage(cocktailImages);
+
     return (
         <Link to={`/service/${ckt.id}`} className='CardLink'>
             <article className='CardArticle'>
