@@ -7,8 +7,8 @@ In the project directory, install dependencies:
 
 Cocktail API Rest Express: [https://github.com/DumontGontran/Cocktail-API-Rest-Express](https://github.com/DumontGontran/Cocktail-API-Rest-Express)
 
-`npm install
- npm run dev`
+`npm install`
+`npm run dev`
 
 ## Available Scripts
 In the project directory, you can run:
