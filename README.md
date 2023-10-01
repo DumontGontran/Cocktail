@@ -1,16 +1,14 @@
 # Getting Started Frontend 
 In the project directory, install dependencies:
 
-```bash 
-npm install``` 
+`npm install` 
 
 # Getting Started Backend 
 
 Cocktail API Rest Express: [https://github.com/DumontGontran/Cocktail-API-Rest-Express](https://github.com/DumontGontran/Cocktail-API-Rest-Express)
 
-```bash 
-npm install
-npm run dev```
+`npm install
+ npm run dev`
 
 ## Available Scripts
 In the project directory, you can run:
