@@ -1,13 +1,16 @@
 # Getting Started Frontend 
 In the project directory, install dependencies:
 
-### `npm install react react-dom react-router-dom react-scripts @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome` 
+```bash 
+npm install``` 
 
 # Getting Started Backend 
 
 Cocktail API Rest Express: [https://github.com/DumontGontran/Cocktail-API-Rest-Express](https://github.com/DumontGontran/Cocktail-API-Rest-Express)
 
-### `npm install cors dotenv express jsonwebtoken mysql2 sequelize nodemon`
+```bash 
+npm install
+npm run dev```
 
 ## Available Scripts
 In the project directory, you can run:
