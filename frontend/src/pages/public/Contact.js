@@ -9,7 +9,7 @@ const Contact = () => {
                 <h3>Développeur Web</h3>
                 <p>Email: <span>dumont.gontran@orange.fr</span></p>
                 <p>Téléphone: <span>06 47 22 56 37</span></p>
-                <p>Portfolio : <a href='https://server-gontran-dumont.fr'>Cliquez-ici</a></p>
+                <p>Portfolio : <a href='https://gontrandev.fr'>Cliquez-ici</a></p>
             </div>
         </div>
     );
