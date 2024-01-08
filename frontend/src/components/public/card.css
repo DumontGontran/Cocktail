@@ -24,6 +24,7 @@
     position: relative;
     top: -125px;
     left: 0;
+    max-width:350px;
 }
 
 .CardArticle p {
@@ -31,6 +32,7 @@
     top: -140px;
     left: 0;
     margin:0;
+    max-width:350px;
 }
 
 .CardArticle span {
@@ -40,6 +42,7 @@
     margin:0;
     font-weight: 200;
     text-decoration: underline;
+    max-width:350px;
 }
 
 .CardLink {
