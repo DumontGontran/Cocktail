@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faSpinner, faTrash } from '@fortawesome/free-solid-svg-icons';
-import { accountService, cocktailService } from '../../../_services';
+import { accountService, cocktailService } from 'src/_services';
 
-import '../cocktail/cocktail.css';
+import 'src/pages/admin/cocktail/cocktail.css';
 
 const Cocktail = () => {
     const [cocktails, setCocktails] = useState([]);

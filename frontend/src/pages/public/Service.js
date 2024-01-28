@@ -2,8 +2,8 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { cocktailService } from '../../_services';
-import { cocktail0, cocktail1, cocktail2, cocktail4, cocktail5 } from '../../components/public/images';
+import { cocktailService } from 'src/_services';
+import { cocktail0, cocktail1, cocktail2, cocktail4, cocktail5 } from 'src/components/public/images';
 
 import '../public/public.css';
 

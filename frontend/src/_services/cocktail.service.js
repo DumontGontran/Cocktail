@@ -1,4 +1,4 @@
-import Axios from "../_services/caller.service";
+import Axios from "src/_services/caller.service";
 
 let getAllCocktails = () => {
     return Axios.get('/cocktails');

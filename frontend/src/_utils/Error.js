@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../_utils/error.css';
+import 'src/_utils/error.css';
 
 const Error = () => {
     return (

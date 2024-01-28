@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { accountService, cocktailService } from '../../../_services';
+import { accountService, cocktailService } from 'src/_services';
 
 import '../cocktail/cocktail.css';
 

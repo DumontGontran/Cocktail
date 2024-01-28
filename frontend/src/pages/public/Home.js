@@ -1,8 +1,8 @@
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState, useRef } from 'react';
-import Card from '../../components/public/Card';
-import { cocktailService } from '../../_services';
+import Card from 'src/components/public/Card';
+import { cocktailService } from 'src/_services';
 
 const Home = () => {
     const [cocktails, setCocktails] = useState([]);

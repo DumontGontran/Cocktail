@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { cocktail0, cocktail1, cocktail2, cocktail3, cocktail4, cocktail5 } from './images';
+import { cocktail0, cocktail1, cocktail2, cocktail3, cocktail4, cocktail5 } from 'src/components/public/images';
 
-import '../public/card.css';
+import 'src/components/public/card.css';
 
 const Card = ({ ckt }) => {
     const getRandomImage = (arr) => {

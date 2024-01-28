@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Error from '../../_utils/Error';
-import { Login, Register } from '../auth';
-import { PublicLayout } from '../public';
+import Error from 'src/_utils/Error';
+import { Login, Register } from 'src/pages/auth';
+import { PublicLayout } from 'src/pages/public';
 
 const AuthRouter = () => {
     return (

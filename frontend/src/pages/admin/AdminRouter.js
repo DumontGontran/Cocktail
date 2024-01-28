@@ -1,10 +1,10 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import { AdminLayout } from '../admin';
-import Error from '../../_utils/Error';
-import { User, UserEdit } from '../admin/user';
-import { Cocktail, CocktailAdd, CocktailEdit } from '../admin/cocktail';
+import { AdminLayout } from 'src/pages/admin';
+import Error from 'src/_utils/Error';
+import { User, UserEdit } from 'src/pages/admin/user';
+import { Cocktail, CocktailAdd, CocktailEdit } from 'src/pages/admin/cocktail';
 
 const PublicRouter = () => {
   return (

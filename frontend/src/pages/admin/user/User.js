@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserEdit, faUserSlash, faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { userService, accountService } from '../../../_services';
+import { userService, accountService } from 'src/_services';
 
 import '../user/user.css';
 
