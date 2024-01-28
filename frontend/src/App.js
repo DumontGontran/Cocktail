@@ -1,4 +1,4 @@
-import './App.css';
+import 'src/App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PublicRouter from 'src/pages/public/PublicRouter';
 import AdminRouter from 'src/pages/admin/AdminRouter';
