@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import { Home, Service, Contact, PublicLayout } from 'src/pages/public';
+import { Home, Service, PublicLayout } from 'src/pages/public';
 import Error from 'src/_utils/Error';
 
 const PublicRouter = () => {
@@ -12,7 +12,6 @@ const PublicRouter = () => {
 
         <Route path='home' element={<Home />} />
         <Route path='service/:cid' element={<Service />} />
-        <Route path='contact' element={<Contact />} />
 
         <Route path='*' element={<Error />} />
       </Route>

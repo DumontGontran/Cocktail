@@ -72,6 +72,7 @@
 }
 
 .cocktailEditIcon {
+    padding-right: 10px;
     cursor: pointer;
     color: black;
 }
@@ -168,13 +169,13 @@
 
     .cocktailEditIcon {
         position: relative;
-        top: 10px;
+        top: 0;
         right: 50px;
     }
 
     .cocktailDeleteIcon {
         position: relative;
-        bottom: 10px;
+        top: 0;
         right: 20px;
     }
 }

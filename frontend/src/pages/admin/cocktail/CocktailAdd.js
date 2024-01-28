@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { z } from "zod";
 import { accountService, cocktailService } from 'src/_services';
 
-import '../cocktail/cocktail.css';
+import 'src/pages/admin/cocktail/cocktail.css';
 
 const CocktailAdd = () => {
     const navigate = useNavigate();
     const [cocktail, setCocktail] = useState({
-        user_id: '',
-        nom: '',
-        description: '',
-        recette: ''
+        user_id: z.string(),
+        nom: z.string(),
+        description: z.string().max(50, 'La description doit contenir au maximum 50 caractères'),
+        recette: z.string().max(50, 'La recette doit contenir au maximum 50 caractères')
     });
 
     const [message, setMessage] = useState();

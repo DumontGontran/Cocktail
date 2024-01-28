@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserEdit, faUserSlash, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { userService, accountService } from 'src/_services';
 
-import '../user/user.css';
+import 'src/pages/admin/user/user.css';
 
 const User = () => {
     const [users, updateUsers] = useState([]);
@@ -52,8 +52,8 @@ const User = () => {
                         <th>Prénom</th>
                         <th>Email</th>
                         <th>Date de création</th>
-                        <th>Édition</th>
-                        <th>Suppression</th>
+
+
                     </tr>
                 </thead>
                 <tbody>
@@ -66,8 +66,19 @@ const User = () => {
                                         <td data-label='Prénom'>{user.prenom}</td>
                                         <td data-label='Email'>{user.email}</td>
                                         <td data-label='Date de création'>{user.createdAt.split('T')[0].split('-').reverse().join('-')}</td>
-                                        <td><Link to={`../edit/${user.id}`}><FontAwesomeIcon icon={faUserEdit} size='lg' className='userEditIcon' /></Link></td>
-                                        <td><span onClick={() => delUser(user.id)}><FontAwesomeIcon icon={faUserSlash} size='lg' className='userDeleteIcon' /></span></td>
+                                        <td>
+                                            <Link to={`../edit/${user.id}`}><FontAwesomeIcon icon={faUserEdit} size='lg' className='userEditIcon' /></Link>
+                                            <span onClick={() => delUser(user.id)}><FontAwesomeIcon icon={faUserSlash} size='lg' className='userDeleteIcon' /></span>
+                                        </td>
+                                    </>
+                                }
+                                {user.id !== id &&
+                                    <>
+                                        <td data-label='Nom'>{user.nom}</td>
+                                        <td data-label='Prénom'>{user.prenom}</td>
+                                        <td data-label='Email'>{user.email}</td>
+                                        <td data-label='Date de création'>{user.createdAt.split('T')[0].split('-').reverse().join('-')}</td>
+
                                     </>
                                 }
                             </tr>

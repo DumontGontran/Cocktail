@@ -12,10 +12,8 @@ h1{
 .Service {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.Service img {
+    background-color: rgb(0, 0, 0, 0.5);
+    margin: auto;
     max-width: 800px;
     max-height: 800px;
     border: 2px dashed darkcyan;
@@ -26,9 +24,6 @@ h1{
 .Service h1 {
     color: whitesmoke;
     text-shadow: 0 0 5px darkcyan;
-    position: relative;
-    top: -230px;
-    left: 0;
     transition: text-shadow 150ms ease-in-out;
     max-width: 800px;
 }
@@ -41,10 +36,8 @@ h1{
 .Service p {
     color: whitesmoke;
     text-shadow: 0 0 5px darkcyan;
-    position: relative;
-    top: -240px;
-    left: 0;
     margin:0;
+    margin-bottom: 20px;
     transition: text-shadow 150ms ease-in-out;
     max-width: 800px;
 }
@@ -57,10 +50,8 @@ h1{
 .Service span {
     color: whitesmoke;
     text-shadow: 0 0 5px darkcyan;
-    position: relative;
-    top: -230px;
-    left: 0;
     margin:0;
+    margin-bottom: 20px;
     font-weight: 200;
     text-decoration: underline;
     transition: text-shadow 150ms ease-in-out;

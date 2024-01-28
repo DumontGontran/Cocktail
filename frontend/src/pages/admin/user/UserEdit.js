@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { userService } from 'src/_services';
 
-import '../user/user.css';
+import 'src/pages/admin/user/user.css';
 
 const UserEdit = () => {
     let navigate = useNavigate();

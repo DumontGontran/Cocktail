@@ -48,8 +48,6 @@ const Cocktail = () => {
                         <th>Nom</th>
                         <th>Description</th>
                         <th>Date de création</th>
-                        <th>Édition</th>
-                        <th>Suppression</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -60,8 +58,10 @@ const Cocktail = () => {
                                     <td data-label='Nom'>{cocktail.nom}</td>
                                     <td data-label='Description'>{cocktail.description}</td>
                                     <td data-label='Date de création'>{cocktail.createdAt.split('T')[0].split('-').reverse().join('-')}</td>
-                                    <td><Link to={`../edit/${cocktail.id}`}><FontAwesomeIcon icon={faEdit} size='lg' className='cocktailEditIcon' /></Link></td>
-                                    <td><span onClick={() => delCocktail(cocktail.id)}><FontAwesomeIcon icon={faTrash} size='lg' className='cocktailDeleteIcon' /></span></td>
+                                    <td>
+                                        <Link to={`../edit/${cocktail.id}`}><FontAwesomeIcon icon={faEdit} size='lg' className='cocktailEditIcon' /></Link>
+                                        <span onClick={() => delCocktail(cocktail.id)}><FontAwesomeIcon icon={faTrash} size='lg' className='cocktailDeleteIcon' /></span>
+                                    </td>
                                 </>
                             }
                         </tr>

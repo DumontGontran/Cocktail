@@ -1,13 +1,18 @@
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useRef, useState } from 'react';
+import { z } from 'zod';
 import { useNavigate, useParams } from 'react-router-dom';
 import { cocktailService } from 'src/_services';
 
-import '../cocktail/cocktail.css';
+import 'src/pages/admin/cocktail/cocktail.css';
 
 const CocktailEdit = () => {
-    const [cocktail, setCocktail] = useState({});
+    const [cocktail, setCocktail] = useState({
+        nom: z.string(),
+        description: z.string().max(50, 'La description doit contenir au maximum 50 caractères'),
+        recette: z.string().max(50, 'La recette doit contenir au maximum 50 caractères')
+    });
     const [message, setMessage] = useState();
     const [isLoad, setLoad] = useState(false);
     let navigate = useNavigate();

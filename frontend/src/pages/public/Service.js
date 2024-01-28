@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { cocktailService } from 'src/_services';
-import { cocktail0, cocktail1, cocktail2, cocktail4, cocktail5 } from 'src/components/public/images';
 
 import '../public/public.css';
 
@@ -12,16 +11,6 @@ const Service = () => {
     const [isLoad, setLoad] = useState(false);
     let flag = useRef(false);
     let { cid } = useParams();
-
-    const getRandomImage = (arr) => {
-        const randomIndex = Math.floor(Math.random(1 * arr.length) * arr.length);
-        const image = arr[randomIndex];
-
-        return image;
-    }
-
-    const cocktailImages = [cocktail0, cocktail1, cocktail2, cocktail4, cocktail5];
-    const image = getRandomImage(cocktailImages);
 
     useEffect(() => {
         if (flag.current === false) {
@@ -45,7 +34,6 @@ const Service = () => {
 
     return (
         <div className='Service'>
-            <img src={image} alt={cocktail.nom} />
             <h1>{cocktail.nom}</h1>
             <p>Description: {cocktail.description}</p>
             <p>Recette: {cocktail.recette}</p>

@@ -30,11 +30,9 @@ const Home = () => {
 
     return (
         <div className='Home'>
-            {
-                cocktails.map((ckt) => (
-                    <Card key={ckt.id} ckt={ckt} />
-                ))
-            }
+            {cocktails.map((ckt) => (
+                <Card key={ckt.id} ckt={ckt} />
+            ))}
         </div>
     );
 };

@@ -2,17 +2,10 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
     transition: filter 150ms ease-in-out;
     max-height: 245px;
     padding: 5px 20px;
-}
-
-.CardArticle:hover {
-    filter: contrast(130%);
-    transition: filter 150ms ease-in-out;
-}
-
-.CardArticle img {
     max-width: 350px;
     max-height: 350px;
     border: 2px dashed darkcyan;
@@ -20,26 +13,24 @@
     box-shadow: 0 0 10px darkcyan;
 }
 
+.CardArticle:hover {
+    filter: contrast(130%);
+    transition: filter 150ms ease-in-out;
+}
+
 .CardArticle h1 {
-    position: relative;
-    top: -125px;
-    left: 0;
     max-width:350px;
 }
 
 .CardArticle p {
-    position: relative;
-    top: -140px;
-    left: 0;
     margin:0;
+    margin-bottom: 20px;
     max-width:350px;
 }
 
 .CardArticle span {
-    position: relative;
-    top: -135px;
-    left: 0;
     margin:0;
+    margin-bottom: 20px;
     font-weight: 200;
     text-decoration: underline;
     max-width:350px;
